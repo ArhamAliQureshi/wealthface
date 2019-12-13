@@ -23,11 +23,4 @@ function App() {
 
   );
 }
-
-const dump = ()=>(
-  <div>
-    <h1>DUMO</h1>
-  </div>
-);
-
 export default App;

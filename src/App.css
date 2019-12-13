@@ -3,18 +3,52 @@
 }
 
 nav{
+  overflow: hidden;
   display: flex;
+  position: fixed;
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
   background: rgb(2, 125, 255);
   color: white;
+  width: 100%;
+  box-shadow: 0 4px 2px -2px gray;
 }
 
-.navLinks{
+/* .navLinks{
   width: 50%;
   display: flex; 
   justify-content: space-around;
   align-items: center;
   list-style: none;
+} */
+
+.navLinks a{
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+nav .logo{
+  background-color: whitesmoke;
+  background-image: url(/wealthface.png);
+  background-repeat: no-repeat;
+  box-shadow: 0 0px 6px 5px whitesmoke;
+  position: relative;
+  float: left;
+  width:  100px;
+  height: 50px;
+  background-position: 50% 50%;
+  background-size:     cover;
+}
+
+.cover{
+  /* position:  absolute; */
+  background-position: 50% 50%;
+  /* background-size:     cover; */
+  width: 100%;
+  min-height: 80vh;
+  background-image: url(/bg.png);
 }
