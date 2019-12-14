@@ -1,17 +1,19 @@
+body{
+  background-color: rgba(219, 218, 218, 0.842);
+  font-family: 'Poppins';font-size: 12px;
+}
+
 .App {
   text-align: center;
 }
 
 nav{
   overflow: hidden;
-  display: flex;
-  position: fixed;
+  padding-left: 50px ;
   justify-content: space-around;
   align-items: center;
-  min-height: 10vh;
   background: rgb(2, 125, 255);
   color: white;
-  width: 100%;
   box-shadow: 0 4px 2px -2px gray;
 }
 
@@ -30,6 +32,25 @@ nav{
   padding: 0px 16px;
   text-decoration: none;
   font-size: 17px;
+  padding-top: 10px;
+  /* height: 100%; */
+}
+.navLinks a:hover{
+  background-color: #f2f2f2;
+  color:  rgb(2, 125, 255);
+  font-weight: bold;
+}
+
+.navLinks{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  height: 50px;
+}
+.navLinks li{
+  list-style-type: none;  
+  margin: 0 2vw;
 }
 nav .logo{
   background-color: whitesmoke;
@@ -45,10 +66,10 @@ nav .logo{
 }
 
 .cover{
-  /* position:  absolute; */
   background-position: 50% 50%;
-  /* background-size:     cover; */
+  background-size:     cover;
   width: 100%;
-  min-height: 80vh;
+  min-height: 60vh;
   background-image: url(/bg.png);
+  margin-bottom: 20vh;
 }
