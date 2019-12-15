@@ -30,6 +30,11 @@ export const MenuUl = styled.ul`
         color:  rgb(2, 125, 255);
         /* color: red; */
     }
+    &>a.isActive{
+        /* margin: 10px 0; */
+        color:  rgb(2, 125, 255);
+        /* color: red; */
+    }
 `;
 
 export const Tab = styled.div`

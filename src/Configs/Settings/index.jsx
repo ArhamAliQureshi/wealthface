@@ -1,7 +1,10 @@
 import React from 'react';
-import { PageHeading, Menu, MenuUl, Tab, TabHeading, TabBody } from './StyledComponets';
+import { PageHeading, Menu, MenuUl } from './StyledComponets';
+import Profile from './Tabs/Profile/template'
+import AccountInformation from './Tabs/AccountInformation/template'
 import PrivacyAndSecurity from './Tabs/PrivacyAndSecurity/template'
-import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import PaymentDetails from './Tabs/PaymentDetails/template'
+import { HashRouter as Router, Switch, Route, Redirect, NavLink } from 'react-router-dom';
 
 
 
@@ -12,14 +15,18 @@ function Settings() {
       <Router basename="/settings">
         <Menu>
           <MenuUl>
-            <Link to="/profile">Profile</Link>
-            <Link to="/accountsInformation">Accounts Information</Link>
-            <Link to="/privacySettings">Privacy & Settings</Link>
-            <Link to="/paymentDetails">Payment details</Link>
+            <NavLink activeClassName='isActive' to="/profile">Profile</NavLink>
+            <NavLink activeClassName='isActive' to="/accountsInformation">Accounts Information</NavLink>
+            <NavLink activeClassName='isActive' to="/privacySettings">Privacy & Settings</NavLink>
+            <NavLink activeClassName='isActive' to="/paymentDetails">Payment details</NavLink>
           </MenuUl>
         </Menu>
         <Switch>
-          <Route path="/" exact component={PrivacyAndSecurity} />
+          <Redirect path="/" exact to="/privacySettings" />
+          <Route path="/profile" exact component={Profile} />
+          <Route path="/accountsInformation" exact component={AccountInformation} />
+          <Route path="/privacySettings" exact component={PrivacyAndSecurity} />
+          <Route path="/paymentDetails" exact component={PaymentDetails} />
         </Switch>
       </Router>
     </div>
